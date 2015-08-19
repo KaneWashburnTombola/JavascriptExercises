@@ -1,6 +1,4 @@
-/**
- * Created by kane.washburn on 19/08/15.
- */
+
 var foo =1;
 if(foo%2===0){
     console.log("this number is even!");
