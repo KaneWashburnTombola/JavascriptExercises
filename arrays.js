@@ -30,3 +30,12 @@ var brandnewArray = namesArray.concat(['keith','steve','darren']);
 console.log(brandnewArray);
 
 
+var randomNumber = [(Math.random()*100),(Math.random()*100),(Math.random()*100),(Math.random()*100)];
+
+for(var i =0;i<randomNumber.length;i++){
+    if(randomNumber[i]%3===0){
+        console.log("Number is divisible by 3");
+    }
+    else{
+        console.log("Number is not divisible by 3");
+    }}
