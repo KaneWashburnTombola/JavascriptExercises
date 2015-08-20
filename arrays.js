@@ -1,14 +1,17 @@
 'use strict';
 
 var namesArray = ["kane","dan","dom","andrew","liam","laurie","ian","katherine","sohaib"];
-
-console.log(namesArray[namesArray.length]);
+var lastElement = namesArray.pop();
+console.log(lastElement);
 
 console.log(namesArray[0]);
 
-for(var i=0; i<namesArray.length; i++){
-    var nameString = "";
-    nameString += namesArray[i] + ',';
-    console.log(nameString);
-}
+var namesString = namesArray.join();
+console.log(namesString);
+
+var ourNames = "kane,dan,dom,andrew,liam,laurie,ian,katherine,sohaib";
+
+var listONames=ourNames.split(',');
+
+console.log(listONames);
 
