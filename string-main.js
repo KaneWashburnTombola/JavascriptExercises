@@ -22,6 +22,7 @@ var queryNumber = function(query){
         console.log("this is a number");
     }
 }
+
 queryNumber("string");
 queryNumber(50);
 
