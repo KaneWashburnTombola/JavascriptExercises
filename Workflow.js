@@ -51,3 +51,17 @@ for(var i= 1; i<=100; i++){
         console.log(i);
     }
 }
+
+var bubbleSort = function(array){
+    for (var i=0; i<=array.length; i++){
+        if(array[i]<array[i+1]) {
+            var foo = array[i];
+            array[i] = array[i+1];
+            array[i+1] = foo;
+        }
+        console.log(array);
+    }
+
+}
+
+bubbleSort([1,2,4,4,3,34,2,4,6,8,12,1,2,1,10]);
