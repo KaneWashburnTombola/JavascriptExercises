@@ -14,17 +14,23 @@ var bigWord ="JSDFHDVHUEVDAKNDSEINX";
 
 console.log(bigWord.search('[AEIOU]'));
 
-var queryNumber = function(query){
-    if(isNaN(query)===true){
-        console.log("This is not a number");
-    }
-    else{
-        console.log("this is a number");
-    }
+var queryNumber = function(query) {
+    query = query.replace(/\s/g, ""); //gets rid of white space
+    var regex = /[0-9]+/i;
+    return regex.test(query);
 }
 
-queryNumber("string");
-queryNumber(50);
+
+ var validQuery= queryNumber("string");
+
+     if(validQuery){
+        console.log("this is a number");
+    }
+    else{
+        console.log("This is not a number");
+    }
+
+
 
 var tombolapostcode = "SR1 1JR";
 
@@ -34,7 +40,7 @@ function valid_postcode(postcode) {
     return regex.test(postcode);
 }
 
-//This will check the post code
+
 var isValid = valid_postcode(tombolapostcode);
 
 if (isValid) {
