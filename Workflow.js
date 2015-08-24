@@ -27,7 +27,7 @@ var equalateralTri= function(size){
     }
 }
 
-equalateralTri(22);
+equalateralTri(12);
 
 var fibArray=[0,1];
 
@@ -36,6 +36,7 @@ for(var i = 1; i < 10; i++) {
     fibArray.push(result);
 }
 console.log(fibArray);
+
 
 for(var i= 1; i<=100; i++){
     if (i%3===0 && i%5!=0){
@@ -61,11 +62,11 @@ var bubbleSort = function(array){
             array[i+1] = foo;
             swapped=true;
         }
-        console.log(array);
     }
     if(swapped){
         bubbleSort(array);
     }
+    console.log(array);
 }
 
 bubbleSort([1,2,4,4,3,34,2,4,6,8,12]);
