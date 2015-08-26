@@ -41,3 +41,31 @@ peopleList.prototype.add = function(name,age,number){
     this.end = newNode;
 }
 
+peopleList.prototype.remove = function(name,age,number) {
+    if (this.start === null) {
+        return;
+    }
+    var previous = null;
+    var current = this.start;
+
+    while (current !== null){
+        previous = current;
+        current = current.next;
+    }
+
+    if (current !== null) {
+        if (previous === null) {
+            this.start = this.start.next;
+        }
+        if (current.next === null) {
+            this.end = previous;
+            if(this.end !== null) {
+                this.end.next = null;
+            }
+        }
+        if ((previous !== null) && (current.next !== null)) {
+            previous.next = current.next;
+        }
+        this.length--;
+    }
+};
