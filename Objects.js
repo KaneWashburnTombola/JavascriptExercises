@@ -7,7 +7,6 @@ var recipe={
 
 var Person =function(name,age,number){
     var me = this;
-    this.next = null;
     this.name=name;
     this.age=age;
     this.number=number;
@@ -20,59 +19,60 @@ var Person =function(name,age,number){
 };
 
 
-var peopleList = function(){
+function Node(nodeValue){
     var me = this;
-    this.start=null;
-    this.end=null;
-    this.length=0;
-};
+    me.value = nodeValue;
+    me.next = null;
 
-
-peopleList.prototype.add = function(object){
-
-    if(this.start===null){
-        this.start = object;
-        this.end = object;
-    }else if(this.end===null){
-        this.end = object;
-        this.next=object;
-    }
-    peopleList.prototype.length++;
+    me.removeNext = function(){
+        if(me.next === null){
+            return;
+        }
+        else if( me.next.next === null){
+            me.next = null;
+        }
+        else {
+            me.next = me.next.next;
+        }
+    };
+    me.insert = function(newNode){
+        if(me.next !== null){
+            var nextNext = me.next;
+            me.next = newNode;
+            newNode.next = nextNext;
+        }
+        else {
+            me.next = newNode;
+        }
+    };
 }
-
-peopleList.prototype.remove = function(object) {
-    if (this.start === null) {
+function outputList(listStart){
+    var current = listStart;
+    if(current === null)
+    {
         return;
     }
-    var previous = null;
-    var current = this.start;
-
-    while (current !== null){
-        previous = current;
+    while(current.next !== null){
+        console.log(current.value);
         current = current.next;
     }
+    console.log(current.value);
+}
 
-    if (current !== null) {
-        if (previous === null) {
-            this.start = this.start.next;
-        }
-        if (current.next === null) {
-            this.end = previous;
-            if(this.end !== null) {
-                this.end.next = null;
-            }
-        }
-        if ((previous !== null) && (current.next !== null)) {
-            previous.next = current.next;
-        }
-        peopleList.prototype.length--;
-    }
-};
+var myNode = new Node(1);
 
-var kane;
-peopleList.prototype.add(kane);
+myNode.insert(new Node(2));
+myNode.insert(new Node(3));
+myNode.insert(new Node(4));
+myNode.insert(new Node(5));
+myNode.insert(new Node(6));
+myNode.insert(new Node(7));
 
-var list = new peopleList();
-list.add(new Person("kane",24,7542524371));
-list.add(new Person("kane",24,7542524371));
-console.log(list);
+outputList(myNode);
+
+console.log("The New list - 5");
+
+myNode.next.next.removeNext();
+
+outputList(myNode);
+
