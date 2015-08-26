@@ -7,6 +7,7 @@ var recipe={
 
 var Person =function(name,age,number){
     var me = this;
+    this.next = null;
     this.name=name;
     this.age=age;
     this.number=number;
@@ -18,5 +19,25 @@ var Person =function(name,age,number){
     }
 };
 
-var kane = new Person('Kane',24,'None of your business');
-kane.showDetails();
+
+var peopleList = function(){
+    this.start=null;
+    this.end=null;
+    this.length=0;
+};
+
+
+peopleList.prototype.add = function(name,age,number){
+
+    var newNode = new Person('Kane',24,'None of your business');
+
+    if(this.start===null){
+        this.start = newNode;
+    }else{
+        this.end.next=newNode;
+    }
+
+    this.length++;
+    this.end = newNode;
+}
+
