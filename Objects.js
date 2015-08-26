@@ -21,27 +21,26 @@ var Person =function(name,age,number){
 
 
 var peopleList = function(){
+    var me = this;
     this.start=null;
     this.end=null;
     this.length=0;
 };
 
 
-peopleList.prototype.add = function(name,age,number){
-
-    var newNode = new Person('Kane',24,'None of your business');
+peopleList.prototype.add = function(object){
 
     if(this.start===null){
-        this.start = newNode;
-    }else{
-        this.end.next=newNode;
+        this.start = object;
+        this.end = object;
+    }else if(this.end===null){
+        this.end = object;
+        this.next=object;
     }
-
-    this.length++;
-    this.end = newNode;
+    peopleList.prototype.length++;
 }
 
-peopleList.prototype.remove = function(name,age,number) {
+peopleList.prototype.remove = function(object) {
     if (this.start === null) {
         return;
     }
@@ -66,6 +65,14 @@ peopleList.prototype.remove = function(name,age,number) {
         if ((previous !== null) && (current.next !== null)) {
             previous.next = current.next;
         }
-        this.length--;
+        peopleList.prototype.length--;
     }
 };
+
+var kane;
+peopleList.prototype.add(kane);
+
+var list = new peopleList();
+list.add(new Person("kane",24,7542524371));
+list.add(new Person("kane",24,7542524371));
+console.log(list);
