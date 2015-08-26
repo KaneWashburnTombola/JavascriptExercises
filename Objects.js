@@ -5,11 +5,11 @@ var recipe={
     ingredients:['meat','potatoes','broccoli','carrots','cabbage','stuffing','peas','yorkshire puddings','gravy granules']
 };
 
-var Person =function(){
+var Person =function(name,age,number){
     var me = this;
-    this.name,
-    this.age,
-    this.number,
+    this.name=name;
+    this.age=age;
+    this.number=number;
     var displayDetails=function(){
         console.log(me);
     };
@@ -18,12 +18,5 @@ var Person =function(){
     }
 };
 
-var kane = new Person();
-kane.name='Kane';
-kane.age=24;
-kane.number='None of your business';
-
-
-
-
+var kane = new Person('Kane',24,'None of your business');
 kane.showDetails();
