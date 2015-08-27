@@ -23,8 +23,9 @@ function Node(nodeValue){
     var me = this;
     me.value = nodeValue;
     me.next = null;
+    me.previous=null;
 
-    me.removeNext = function(){
+    me.remove = function(){
         if(me.next === null){
             return;
         }
@@ -37,14 +38,42 @@ function Node(nodeValue){
     };
     me.insert = function(newNode){
         if(me.next !== null){
-            var nextNext = me.next;
-            me.next = newNode;
-            newNode.next = nextNext;
+            newNode.next=me.next;
+            newNode.previous=me;
+            newNode.next.previous = newNode;
+            newNode.previous.next=newNode;
         }
         else {
             me.next = newNode;
+            newNode.previous=me;
         }
     };
+    me.insertBefore=function(newNode){
+        if(me.previous!==null){
+            newNode.next=me;
+            newNode.previous=me.previous;
+            newNode.next.previous = newNode;
+            newNode.previous.next=newNode;
+        }
+        else{
+            me.previous = newNode;
+            newNode.next=me;
+
+        }
+    };
+    me.removeBefore=function(newNode){
+        if(me.previous===null){
+            return;
+        }
+        else if (me.previous.previous===null){
+            return me;
+        }
+        else{
+
+            me.previous= me.previous.previous;
+            me.previous.next=me;
+        }
+    }
 }
 function outputList(listStart){
     var current = listStart;
@@ -70,9 +99,27 @@ myNode.insert(new Node(7));
 
 outputList(myNode);
 
-console.log("The New list - 5");
+console.log("The New list");
 
-myNode.next.next.removeNext();
+myNode.next.next.remove();
 
 outputList(myNode);
 
+console.log("adding 78 before 6");
+
+myNode.next.next.insertBefore(new Node(78));
+outputList(myNode);
+
+myNode = myNode.next.removeBefore();
+console.log("       ");
+console.log("       ");
+console.log("       ");
+outputList(myNode);
+
+console.log("       ");
+console.log("       ");
+console.log("       ");
+
+myNode.next.next.removeBefore();
+
+outputList(myNode);
