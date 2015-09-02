@@ -1,30 +1,29 @@
 'use strict';
 
-var numOfGallons = function(MPG,distance){
-    var gallons = distance/MPG;
-    console.log(gallons);
+var numberOfGallonsNeeded = function(mpg,distance){
+    var gallons = distance/mpg;
+    return gallons;
 }
+numberOfGallonsNeeded(15,315);
 
-numOfGallons(15,315);
 
-
-var loveCalc=function(name1,name2){
+var loveCalculator=function(name1,name2){
     var foo = (name1.length + name2.length)-(Math.round(Math.random()*6));
     var bar = foo * 42;
     if(bar>100){
-        console.log("Your love match is 100");
+        return 100;
     }
     else{
-        console.log("Your love match is" +" " +  bar);
+        return bar;
     }
 }
 
 
-loveCalc("kane","dan");
+loveCalculator("kane","dan");
 
 var circleArea= function(radius){
     var result = (radius*radius)* Math.PI;
-    console.log(result);
+    return result;
 }
 
 circleArea(20);
