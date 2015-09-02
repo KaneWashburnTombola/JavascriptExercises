@@ -3,13 +3,16 @@ var bigNum = function(value1,value2){
     if(value1>value2){
         console.log("Value 1 is bigger!");
     }
-    else{
+    else if(value1===value2){
         console.log("Value 2 is bigger");
+    }
+    else{
+        console.log("They are both the same");
     }
 }
 bigNum(2,1);
 bigNum(3,4);
-
+bigNum(3,3);
 
 var posProd = function(value1,value2,value3){
     var result = (value1*value2)*value3;
