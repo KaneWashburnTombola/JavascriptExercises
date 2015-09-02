@@ -1,22 +1,22 @@
 'use strict';
-var bigNum = function(value1,value2){
+var numberComparer = function(value1,value2){
     if(value1>value2){
         console.log("Value 1 is bigger!");
     }
     else if(value1===value2){
-        console.log("Value 2 is bigger");
-    }
-    else{
         console.log("They are both the same");
     }
+    else{
+        console.log("Value 2 is bigger");
+    }
 }
-bigNum(2,1);
-bigNum(3,4);
-bigNum(3,3);
+numberComparer(2,1);
+numberComparer(3,4);
+numberComparer(3,3);
 
-var posProd = function(value1,value2,value3){
+var isPositiveProduct = function(value1,value2,value3){
     var result = (value1*value2)*value3;
-    console.log("The product is" + result);
+    console.log("The product is" + " " +result);
     if(result>0){
         console.log("Product is positive!");
     }
@@ -26,8 +26,8 @@ var posProd = function(value1,value2,value3){
 
 }
 
-posProd(1,2,3);
-posProd(1,2,-3);
+isPositiveProduct(1,2,3);
+isPositiveProduct(1,2,-3);
 
 var gradeCalc=function(score){
     if(score<40){
