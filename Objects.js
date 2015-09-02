@@ -11,7 +11,7 @@ var Person =function(name,age,number){
     this.age=age;
     this.number=number;
     var displayDetails=function(){
-        console.log(me);
+        return me;
     };
     this.showDetails=function(){
         displayDetails();
@@ -19,7 +19,7 @@ var Person =function(name,age,number){
 };
 
 
-var Node function(nodeValue){
+var Node = function(nodeValue){
     var me = this;
     me.value = nodeValue;
     me.next = null;
