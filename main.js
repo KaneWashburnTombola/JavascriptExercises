@@ -7,33 +7,33 @@ else{
     console.log("this number is odd");
 }
 
-var convertFar = 0;
-var convertCel=function(number){
-    convertFar = ((number*2)+30);
+var convertFarenheit = 0;
+var convertCelsius=function(number){
+    convertFarenheit = (((number*5)/9)+32);
 }
-convertCel(12);
-console.log(convertFar);
+convertCelsius(12);
+console.log(convertFarenheit);
 
-var convertRad =0;
-var convertDeg=function(number){
-    convertRad=((Math.PI/180)*number);
+var convertRadians =0;
+var convertDegrees=function(number){
+    convertRadians=((Math.PI/180)*number);
 }
-convertDeg(345);
-console.log(convertRad);
+convertDegrees(345);
+console.log(convertRadians);
 
-var Hypo=0;
-var findHypo=function(number1,number2){
-    Hypo=Math.sqrt(((number1*number1)+(number2*number2)));
+var Hypotoneuse=0;
+var findHypotoneuse=function(number1,number2){
+    Hypotoneuse=Math.sqrt(((number1*number1)+(number2*number2)));
 }
-findHypo(3,4);
-console.log(Hypo);
+findHypotoneuse(3,4);
+console.log(Hypotoneuse);
 
-var hyLength = 0;
-var trigCalc = function(length,angle){
-     hyLength= Math.sin(angle)*length;
+var hypotoneuseLength = 0;
+var trigCalculation = function(length,angle){
+    hypotoneuseLength= Math.sin(angle)*length;
 }
-trigCalc(12,30);
-console.log(hyLength);
+trigCalculation(12,30);
+console.log(hypotoneuseLength);
 
 
 var diceRoll = (Math.floor(Math.random()*6)+1);
