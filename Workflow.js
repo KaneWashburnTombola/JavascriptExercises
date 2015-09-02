@@ -66,7 +66,7 @@ var bubbleSort = function(array){
     if(swapped){
         bubbleSort(array);
     }
-    console.log(array);
+    return array;
 }
 
 bubbleSort([1,2,4,4,3,34,2,4,6,8,12]);
