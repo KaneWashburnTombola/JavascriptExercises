@@ -31,22 +31,22 @@ isPositiveProduct(1,2,-3);
 isPositiveProduct(1,2,0);
 var gradeCalc=function(score){
     if(score<40){
-        console.log("Your grade = F");
+        console.log("F");
     }
     else if(score<50 && score>=40){
-        console.log("Your grade = E");
+        console.log("E");
     }
     else if(score<60 && score>=50){
-        console.log("Your grade = D");
+        console.log("D");
     }
     else if(score<70 && score>=60){
-        console.log("Your grade = C");
+        console.log("C");
     }
     else if(score<80 && score>=70){
-        console.log("Your grade = B");
+        console.log("B");
     }
     else if(score<100 && score>=80){
-        console.log("Your grade = A");
+        console.log("A");
     }
 }
 
