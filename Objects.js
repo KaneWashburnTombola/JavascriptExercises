@@ -19,7 +19,7 @@ var Person =function(name,age,number){
 };
 
 
-function Node(nodeValue){
+var Node function(nodeValue){
     var me = this;
     me.value = nodeValue;
     me.next = null;
@@ -75,7 +75,7 @@ function Node(nodeValue){
         }
     }
 }
-function outputList(listStart){
+var outputList = function(listStart){
     var current = listStart;
     if(current === null)
     {
