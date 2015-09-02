@@ -17,7 +17,7 @@ numberComparer(3,3);
 var isPositiveProduct = function(value1,value2,value3){
     var result = (value1*value2)*value3;
     console.log("The product is" + " " +result);
-    if(result>0){
+    if(result>=0){
         console.log("Product is positive!");
     }
     else{
@@ -28,7 +28,7 @@ var isPositiveProduct = function(value1,value2,value3){
 
 isPositiveProduct(1,2,3);
 isPositiveProduct(1,2,-3);
-
+isPositiveProduct(1,2,0);
 var gradeCalc=function(score){
     if(score<40){
         console.log("Your grade = F");
