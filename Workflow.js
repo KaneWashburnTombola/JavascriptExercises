@@ -11,7 +11,7 @@ var rightAngle =function(size){
 rightAngle(3);
 rightAngle(5);
 
-var equalateralTri= function(size){
+var equalateralTriangle= function(size){
     var stars = '';
     var spaces = '';
     for(var i = 0 ; i < size; i++){
@@ -27,15 +27,15 @@ var equalateralTri= function(size){
     }
 }
 
-equalateralTri(12);
+equalateralTriangle(12);
 
-var fibArray=[0,1];
+var fibonacciArray=[0,1];
 
 for(var i = 1; i < 10; i++) {
-    var result =fibArray[i-1]+fibArray[i];
-    fibArray.push(result);
+    var result =fibonacciArray[i-1]+fibonacciArray[i];
+    fibonacciArray.push(result);
 }
-console.log(fibArray);
+console.log(fibonacciArray);
 
 
 for(var i= 1; i<=100; i++){
