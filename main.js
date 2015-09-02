@@ -36,6 +36,6 @@ trigCalc(12,30);
 console.log(hyLength);
 
 
-var diceRoll = (Math.round(Math.random()*6));
+var diceRoll = (Math.floor(Math.random()*6)+1);
 
 console.log(diceRoll);
