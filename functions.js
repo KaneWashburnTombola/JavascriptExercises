@@ -22,9 +22,9 @@ var loveCalc=function(name1,name2){
 
 loveCalc("kane","dan");
 
-var circArea= function(radius){
+var circleArea= function(radius){
     var result = (radius*radius)* Math.PI;
     console.log(result);
 }
 
-circArea(20);
+circleArea(20);
