@@ -1,8 +1,7 @@
 'use strict';
 
 var namesArray = ["kane","dan","dom","andrew","liam","laurie","ian","katherine","sohaib"];
-var lastElement = namesArray.pop();
-console.log(lastElement);
+console.log(namesArray[namesArray.length]);
 
 
 
