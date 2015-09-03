@@ -19,12 +19,18 @@ var brandnewArray = namesArray.concat(['keith','steve','darren']);
 
 console.log(brandnewArray);
 
-var randomNumber = [(Math.random()*100),(Math.random()*100),(Math.random()*100),(Math.random()*100)];
 
-for(var i =0;i<randomNumber.length;i++){
-    if(randomNumber[i]%3===0){
-        console.log("Number is divisible by 3");
+var randomNumber=function(array) {
+    var valueArray=[];
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] % 3 === 0) {
+           valueArray.push(array[i]);
+        }
+        else{
+            console.log("The array has no elements divisible by 3");
+        }
     }
-    else{
-        console.log("Number is not divisible by 3");
-    }}
+    return valueArray;
+}
+console.log(randomNumber([3,6,9,12,15]));
+console.log(randomNumber([1,2,4,5,7,8]));
