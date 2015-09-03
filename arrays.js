@@ -1,8 +1,8 @@
 'use strict';
 
 var namesArray = ["kane","dan","dom","andrew","liam","laurie","ian","katherine","sohaib"];
-var lastElement = namesArray.length;
-console.log(namesArray[lastElement]);
+
+console.log(namesArray[namesArray.length-1]);
 
 console.log(namesArray[0]);
 
