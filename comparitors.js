@@ -18,7 +18,7 @@ var isPositiveProduct = function(value1,value2,value3){
     var result = (value1*value2)*value3;
     console.log("The product is" + " " +result);
     if(result>=0){
-        console.log("Product is positive!");
+        return result
     }
     else{
         console.log("Product is negative!");
@@ -31,22 +31,22 @@ isPositiveProduct(1,2,-3);
 isPositiveProduct(1,2,0);
 var gradeCalc=function(score){
     if(score<40){
-        console.log("F");
+        return "F"
     }
     else if(score<50 && score>=40){
-        console.log("E");
+        return "E"
     }
     else if(score<60 && score>=50){
-        console.log("D");
+        return "D"
     }
     else if(score<70 && score>=60){
-        console.log("C");
+        return"C"
     }
     else if(score<80 && score>=70){
-        console.log("B");
+        return "B"
     }
     else if(score<100 && score>=80){
-        console.log("A");
+        return "A";
     }
 }
 
