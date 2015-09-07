@@ -111,14 +111,8 @@ myNode.next.next.insertBefore(new Node(78));
 outputList(myNode);
 
 myNode = myNode.next.removeBefore();
-console.log("       ");
-console.log("       ");
-console.log("       ");
-outputList(myNode);
 
-console.log("       ");
-console.log("       ");
-console.log("       ");
+outputList(myNode);
 
 myNode.next.next.removeBefore();
 
